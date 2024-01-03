@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bislerium_Cafe.Dashboard"
+             Title="Dashboard"
+             BackgroundColor="#6F4E37">
+    <NavigationPage.TitleView>
+        <Label Text="Dashboard" FontSize="24" TextColor="White" FontAttributes="Bold"/>
+    </NavigationPage.TitleView>
+    <ScrollView>
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Text="Menu" Clicked="OnMenuClicked" BackgroundColor="#8E6B53" TextColor="White" CornerRadius="8" Margin="0,0,0,10"/>
+            <Button Grid.Row="1" Text="Orders" Clicked="OnOrdersClicked" BackgroundColor="#8E6B53" TextColor="White" CornerRadius="8" Margin="0,0,0,10"/>
+            <Button Grid.Row="2" Text="Promotions" Clicked="OnPromotionsClicked" BackgroundColor="#8E6B53" TextColor="White" CornerRadius="8" Margin="0,0,0,10"/>
+            <Button Grid.Row="3" Text="Logout" Clicked="Logout" BackgroundColor="#8E6B53" TextColor="White" CornerRadius="8"/>
+
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

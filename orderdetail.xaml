@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bislerium_Cafe.orderdetail"
+             Title="orderdetail"
+             BackgroundColor="#FFFFFF">
+    <StackLayout Padding="20" Spacing="15">
+
+        <!-- Order ID Entry -->
+        <Label Text="Order ID" FontSize="16" TextColor="#333333"/>
+        <Entry x:Name="OrderIdEntry" Placeholder="Enter Order ID" FontSize="16" />
+
+        <!-- Table No Entry -->
+        <Label Text="Table No" FontSize="16" TextColor="#333333"/>
+        <Entry x:Name="TableNoEntry" Placeholder="Enter Table No" FontSize="16" />
+
+        <!-- Order By Entry -->
+        <Label Text="Order By" FontSize="16" TextColor="#333333"/>
+        <Entry x:Name="OrderByEntry" Placeholder="Enter Order By" FontSize="16" />
+
+        <!-- Submit Button -->
+        <Button Text="Submit Order" Clicked="OnSubmitClicked" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="8" />
+
+    </StackLayout>
+</ContentPage>

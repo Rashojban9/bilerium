@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bislerium_Cafe.Menupage"
+             Title="Menu"
+             BackgroundColor="#6F4E37">
+
+
+    <StackLayout Padding="20" Spacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+        <!-- Title -->
+        <Label Text="Coffee Menu" FontSize="32" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <!-- List of Coffee Items -->
+        <ListView x:Name="coffeeListView" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame BackgroundColor="#FFFFFF" CornerRadius="10" Margin="10">
+                            <StackLayout Padding="20" Spacing="10">
+                                <Label Text="{Binding Name}" FontSize="22" TextColor="#35210C" FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}" FontSize="16" TextColor="#6F4E37"/>
+                                <Label Text="{Binding Price, StringFormat='Price: ${0:F2}'}" FontSize="18" TextColor="#8E6B53"/>
+                                <Button Text="Order" Clicked="Order" BackgroundColor="#693504" TextColor="White" CornerRadius="8" HeightRequest="40"/>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bislerium_Cafe.order"
+             Title="order"
+             BackgroundColor="#6F4E37">
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center" HorizontalOptions="Center"
+                         >
+
+            <Frame BackgroundColor="White" CornerRadius="15" HasShadow="True" Padding="20" BorderColor="Black">
+                <VerticalStackLayout Spacing="20">
+
+                    <Label Text="Place Your Order"
+                        FontSize="24"
+                        HorizontalOptions="Center"
+                        TextColor="#693504" />
+
+                    <Picker Title="Select Coffee Type"
+                         x:Name="CoffeeTypePicker"
+                         FontSize="16"
+                         TextColor="#333"
+                         BackgroundColor="#f9f9f9" />
+
+                    <Picker Title="Select Add-ins"
+                         x:Name="AddInsPicker"
+                         FontSize="16"
+                         TextColor="#333"
+                         BackgroundColor="#f9f9f9" />
+
+                    <Entry Placeholder="Quantity"
+                        x:Name="QuantityEntry"
+                        Keyboard="Numeric"
+                        FontSize="16"
+                        PlaceholderColor="#aaa"
+                        BackgroundColor="#f9f9f9"
+                        HeightRequest="40" />
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
+                        <CheckBox x:Name="SmallCheckBox"
+                               Color="#693504"
+                               CheckedChanged="OnSizeCheckedChanged"
+                                />
+                        <Label Text="Small"
+                            FontSize="16"
+                            TextColor="#333"
+                            VerticalOptions="Center" />
+
+                        <CheckBox x:Name="MediumCheckBox"
+                               Color="#693504"
+                               CheckedChanged="OnSizeCheckedChanged" />
+                        <Label Text="Medium"
+                            FontSize="16"
+                            TextColor="#333"
+                            VerticalOptions="Center" />
+
+                        <CheckBox x:Name="LargeCheckBox"
+                               Color="#693504"
+                               CheckedChanged="OnSizeCheckedChanged" />
+                        <Label Text="Large"
+                            FontSize="16"
+                            TextColor="#333"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
+                        <CheckBox x:Name="ExpressDeliveryCheckBox"
+                               Color="#693504"
+                               CheckedChanged="OnExpressDeliveryCheckedChanged" />
+                        <Label Text="Express Delivery"
+                            FontSize="16"
+                            TextColor="#333"
+                            VerticalOptions="Center" />
+                    </StackLayout>
+
+                    <!-- Summary Section -->
+                    <BoxView HeightRequest="1" Color="#ddd" HorizontalOptions="FillAndExpand" Margin="0,15,0,15" />
+                    <Label Text="Order Summary"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#693504"
+                        HorizontalOptions="Center" />
+                    <Label x:Name="SummaryLabel"
+                        FontSize="16"
+                        TextColor="#333"
+                        HorizontalOptions="Center" />
+
+                    <ActivityIndicator x:Name="LoadingIndicator"
+                                    Color="#693504"
+                                    IsRunning="False"
+                                    IsVisible="False"
+                                    HorizontalOptions="Center" />
+
+                    <Button Text="Place Order"
+                         TextColor="#fff"
+                         BackgroundColor="#693504"
+                         FontSize="18"
+                         Clicked="OnPlaceOrderClicked"
+                         CornerRadius="8"
+                         HeightRequest="40" />
+
+
+                    <Label x:Name="OrderConfirmation"
+                        TextColor="Green"
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        IsVisible="False" />
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
